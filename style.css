@@ -7,13 +7,65 @@ html, body, *{
 
 
 .Main-Header{
+    
     text-align: center;
     color:black;
     font-size: 2.5rem;
-    margin-top: 6.25rem;
-    margin-bottom: 6.25rem;
+    margin-top: 3rem;
+    margin-bottom: 10.25rem;
+    }
 
+@keyframes China_Flag {
+    0%   {right:1rem; top:1rem;}
+    25%  {right:12.5rem; top:1rem;}
+    50%  {right:12.5rem; top:12.5rem;}
+    75%  {right:1rem; top:12.5rem;}
+    100% {right:1rem; top:1rem;}
+  }
+
+.china_Flag_01{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    animation-name: China_Flag;
+    animation-duration: 4s;
 }
+
+.Flag:hover{
+    transform: scale(1.5);
+}
+
+.music{
+    position: absolute;
+    top: 1rem;
+    left:1rem; 
+    border: 10px Solid yellow;
+    color:white;
+    width: 350px;
+    background: #f1F3F4;
+}
+
+.Grow:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.shrink:hover{
+    transform: scale(0.5);
+    transition: 0.7s;
+}
+
+.music box {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.box:hover {
+    transform: skew(-10deg);
+    transition: 0.7s;
+  }
+
 
 .colloms{
     width: 95%;
@@ -22,30 +74,229 @@ html, body, *{
     border: 0.313rem solid black;
     box-shadow: 0.625rem 0.313rem 0.313rem grey;
     margin-bottom: 6.25rem;
-    font-size: 1.563rem;
+    
 
 }
 
-.Photo{
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem;
+.post{
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width:  31.25rem;
+    height: 31.25rem;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 0.625rem 0.313rem 0.313rem grey;
-    text-align: center;
-    border: 0.063rem Solid black;
-    background-color: white;
-    color:black;
-    width: 32.5rem;
 }
 
-img{
+.cena{
     width:  31.25rem;
     height: 31.25rem;
     object-fit: cover;
 }
 
-header{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.other_image{
+    width:  31.25rem;
+    height: 31.25rem;
+    object-fit: cover;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:  31.25rem;
+    height: 31.25rem;
+    object-fit: cover;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.post:hover .overlay {
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.text {
+    color: white;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* 2340x1080 pixels at 476ppi */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) { 
+
+    .colloms{
+            width: 95%;
+            display: flex;
+            justify-content: space-arround;
+            border: 0.313rem solid red;
+            box-shadow: 0.625rem 0.313rem 0.313rem grey;
+            margin-bottom: 6.25rem;
+
+    }
+    .image {
+        display: block;
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0.625rem 0.313rem 0.313rem grey;
+    }
+    .Main-Header{
+    
+        text-align: center;
+        color:black;
+        font-size: 2.5rem;
+        margin-top: 20rem;
+        margin-bottom: 10.25rem;
+        }
+        .other_image{
+            width:  15rem;
+            height: 15rem;
+            object-fit: cover;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width:  15rem;
+            height: 15rem;
+            object-fit: cover;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: black;
+        }
+        .cena{
+            width:  15rem;
+            height: 15rem;
+            object-fit: cover;
+        }
+    }
+
+/* Landscape*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    .colloms{
+        width: 95%;
+        display: flex;
+        justify-content: space-arround;
+        border: 0.313rem solid red;
+        box-shadow: 0.625rem 0.313rem 0.313rem grey;
+        margin-bottom: 6.25rem;
+
+}
+.image {
+    display: block;
+    width:  15rem;
+    height: 15rem;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem grey;
+}
+.Main-Header{
+
+    text-align: center;
+    color:black;
+    font-size: 2.5rem;
+    margin-top: 25rem;
+    margin-bottom: 10.25rem;
+    }
+    .other_image{
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: black;
+    }
+    .cena{
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+    .colloms{
+        width: 95%;
+        display: flex;
+        justify-content: space-arround;
+        border: 0.313rem solid red;
+        box-shadow: 0.625rem 0.313rem 0.313rem grey;
+        margin-bottom: 6.25rem;
+
+}
+.image {
+    display: block;
+    width:  15rem;
+    height: 15rem;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem grey;
+}
+.Main-Header{
+
+    text-align: center;
+    color:black;
+    font-size: 2.5rem;
+    margin-top: 25rem;
+    margin-bottom: 10.25rem;
+    }
+    .other_image{
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: black;
+    }
+    .cena{
+        width:  15rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+}
 
